@@ -12,6 +12,13 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
 export const HeroContent = () => {
+    // State for cycling profile photos
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const profilePhotos = [
+      "/projects/profile-photo1.jpeg",
+      "/projects/profile-photo.jpeg"
+    ];
+
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -127,11 +134,40 @@ export const HeroContent = () => {
           variants={slideInFromRight(0.8)}
           className="w-full h-full hidden md:flex justify-center items-center"
         >
-          <div className="relative w-[560px] h-[560px] select-none">
+          {/* Animated Tech Cards Circle with Large Profile Photo Centered */}
+          <div className="relative w-[520px] h-[520px] select-none flex items-center justify-center">
             <div className="absolute inset-8 rounded-full border border-cyan-500/20" />
             <div className="absolute inset-20 rounded-full border border-cyan-500/10" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(8,145,178,0.16),transparent_60%)]" />
 
+            {/* Profile Photo Centered and Fitting Circle, Clickable to Cycle */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10">
+              <button
+                type="button"
+                aria-label="Cycle Profile Photo"
+                onClick={() => setPhotoIndex((prev) => (prev + 1) % profilePhotos.length)}
+                className="focus:outline-none"
+                style={{ borderRadius: '9999px' }}
+              >
+                <div className="bg-slate-900/80 backdrop-blur-lg rounded-full border-4 border-cyan-500/20 shadow-xl p-2 transition-transform hover:scale-105 active:scale-95">
+                  <Image
+                    src={profilePhotos[photoIndex]}
+                    alt="Profile Photo"
+                    width={260}
+                    height={260}
+                    className="w-64 h-64 rounded-full object-cover border-4 border-slate-800 shadow-lg"
+                    style={{ background: 'linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%)', objectFit: 'cover' }}
+                    priority
+                  />
+                </div>
+              </button>
+              <div className="mt-4 text-center">
+                <h2 className="text-lg sm:text-2xl font-bold text-white">Shambhu</h2>
+                <p className="text-cyan-400 text-sm sm:text-base">Debugger</p>
+              </div>
+            </div>
+
+            {/* Tech Cards */}
             {techCards.map((card) => (
               <motion.div
                 key={card.label}
@@ -146,14 +182,14 @@ export const HeroContent = () => {
                   ease: "easeInOut",
                 }}
               >
-                <div className="w-20 h-20 rounded-2xl bg-slate-900/55 border border-slate-500/40 backdrop-blur-md shadow-2xl shadow-cyan-900/20 grid place-items-center">
-                  <Image src={card.icon} alt={card.label} width={40} height={40} className="opacity-90" />
+                <div className="w-24 h-24 rounded-2xl bg-slate-900/55 border border-slate-500/40 backdrop-blur-md shadow-2xl shadow-cyan-900/20 grid place-items-center">
+                  <Image src={card.icon} alt={card.label} width={48} height={48} className="opacity-90" />
                 </div>
               </motion.div>
             ))}
 
             <motion.div
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full border border-cyan-400/20"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border border-cyan-400/20"
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             />

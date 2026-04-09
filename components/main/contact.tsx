@@ -92,8 +92,8 @@ export const Contact = () => {
 
   const socialLinks = [
     { name: "GitHub", icon: "💻", url: "https://github.com/Shambhu902", color: "hover:text-gray-300" },
-    { name: "dIn", icon: "💼", url: "https://www.din.com/in/shambhudhan/", color: "hover:text-blue-400" },
-    { name: "", icon: "🐦", url: "https://x.com/Shambhudhanpal", color: "hover:text-sky-400" },
+    { name: "LinkedIn", icon: "💼", url: "https://www.linkedin.com/in/shambhudhan/", color: "hover:text-blue-400" },
+    { name: "Twitter", icon: "🐦", url: "https://twitter.com/Shambhudhanpal", color: "hover:text-sky-400" },
     { name: "Email", icon: "📧", url: "mailto:shambhudhanpal@gmail.com", color: "hover:text-cyan-300" },
   ];
 
@@ -151,16 +151,14 @@ export const Contact = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div> */}
 
-      <motion.div
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        className="relative z-10 w-full max-w-7xl mx-auto"
-      >
-        {/* Header Section */}
-        <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 sm:gap-3 py-3 px-6 sm:py-4 sm:px-8 bg-slate-900/70 backdrop-blur-md rounded-2xl border border-cyan-500/20 shadow-2xl mb-4 sm:mb-6">
+      {/* Centered Get in Touch Section */}
+      <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center mb-16 text-center">
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
+          <div className="inline-flex items-center gap-2 sm:gap-3 py-3 px-6 sm:py-4 sm:px-8 bg-slate-900/70 backdrop-blur-md rounded-2xl border border-cyan-500/20 shadow-2xl mb-4 sm:mb-6 justify-center">
             <motion.div
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 5 }}
@@ -187,6 +185,17 @@ export const Contact = () => {
             Let&apos;s turn your vision into reality.
           </p>
         </motion.div>
+      </div>
+
+      <motion.div
+        ref={ref}
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="relative z-10 w-full max-w-7xl mx-auto"
+      >
+        {/* Header Section */}
+        {/* Removed duplicate Get in Touch section */}
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {/* Contact Information */}
@@ -195,11 +204,17 @@ export const Contact = () => {
               whileHover={!isMobile ? { y: -5 } : {}}
               className="bg-slate-900/80 backdrop-blur-lg rounded-2xl sm:rounded-3xl border border-slate-700/40 p-6 sm:p-8 text-center shadow-lg shadow-cyan-900/10"
             >
+              {/* Only profile-photo1.jpeg is shown */}
               <motion.div
                 whileHover={!isMobile ? { scale: 1.05 } : {}}
-                className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 sm:mb-6 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center"
+                className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 sm:mb-6 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center overflow-hidden border-4 border-cyan-400/20 shadow"
               >
-                <UserCircleIcon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                <img
+                  src="/projects/profile-photo1.jpeg"
+                  alt="Profile Photo 1"
+                  className="w-full h-full object-cover rounded-full"
+                  style={{ background: 'linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%)' }}
+                />
               </motion.div>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Shambhudhanpal</h3>
               <p className="text-cyan-400 font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Fullstack Developer</p>
