@@ -5,26 +5,26 @@ import { ArrowDownTrayIcon, ArrowTopRightOnSquareIcon, DocumentTextIcon, Sparkle
 import { motion } from "framer-motion";
 
 export const Resume = () => {
-  const certifications = [
+  const Certifications = [
     {
-      title: "Master Generative AI & Generative AI tools",
+      title: "Computational Theory: Language Principle & Finite Automata Theory",
       issuer: "Infosys",
-      href: "https://drive.google.com/file/d/1orV7UXeQuuiVkZiZBZf5F2vOIZfPWr0W/view",
+      href: "https://drive.google.com/file/d/1SQ8oTd2DL8c7FIeY7dmf_Zb_WvcF8sB9/view?usp=drive_link",
     },
     {
       title: "Computer Communications",
       issuer: "Coursera",
-      href: "https://drive.google.com/file/d/12cp7Hj07miwnMMuvAloVCb7a5ZNuoWD_/view",
+      href: "https://drive.google.com/file/d/1pwzMO8CdeRMDNBuzO594Fe_vjyp80RsB/view?usp=drive_link",
     },
     {
-      title: "TCP/IP and Advance Topics",
-      issuer: "Infosys",
-      href: "https://drive.google.com/file/d/1xSQn9LW2F7vSkwWxD-PFBqzHOZMoJRRf/view",
+      title: "Master Generative AI & Generative AI tools",
+      issuer: "Udemy",
+      href: "https://drive.google.com/file/d/1s35LdcX4bpap9A5hVVDy5TGPkSK24i8a/view?usp=drive_link",
     },
     {
       title: "The bits and Bytes of Computer Networking",
-      issuer: "Google",
-      href: "https://drive.google.com/file/d/1fLspDx_NP4FpFcsHqfziYWICYjaAHydz/view",
+      issuer: "Coursera",
+      href: "https://drive.google.com/file/d/1eYUGeotrwzFu95huZIRdIay8XQfWQbBR/view?usp=drive_link",
     },
   ];
 
@@ -135,7 +135,7 @@ export const Resume = () => {
               <p className="mt-2 text-gray-300">Credential showcase with direct verification links.</p>
             </div>
             <span className="inline-flex w-fit items-center rounded-full border border-cyan-300/40 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
-              {certifications.length}+ Achievements
+              {Certifications.length}+ Achievements
             </span>
           </div>
 
@@ -151,16 +151,16 @@ export const Resume = () => {
             }}
             className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
           >
-            {certifications.map((certificate, index) => (
+            {Certifications.map((ificate, index) => (
               <motion.li
-                key={certificate.href}
+                key={ificate.href}
                 variants={{
                   hidden: { opacity: 0, y: 16 },
                   visible: { opacity: 1, y: 0 },
                 }}
               >
                 <a
-                  href={certificate.href}
+                  href={ificate.href}
                   target="_blank"
                   rel="noreferrer"
                   className="group relative block h-full overflow-hidden rounded-2xl border border-white/15 bg-slate-950/55 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:shadow-[0_14px_40px_-18px_rgba(34,211,238,0.65)]"
@@ -172,16 +172,16 @@ export const Resume = () => {
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <span className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-200">
-                        {certificate.issuer}
+                        {ificate.issuer}
                       </span>
                     </div>
 
                     <p className="mt-4 text-base font-semibold leading-snug text-white md:text-lg">
-                      {certificate.title}
+                      {ificate.title}
                     </p>
 
                     <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition-colors group-hover:text-cyan-100">
-                      View certificate
+                      View ificate
                       <ArrowTopRightOnSquareIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </div>
                   </div>
@@ -191,7 +191,7 @@ export const Resume = () => {
           </motion.ul>
 
           <p className="mt-6 text-sm text-gray-300">
-            More certifications will be added continuously as I complete new programs.
+            More Certifications will be added continuously as I complete new programs.
           </p>
         </div>
       </motion.div>

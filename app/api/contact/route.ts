@@ -113,8 +113,8 @@ export async function POST(request: NextRequest) {
               <a href="https://github.com/yourusername" style="display: inline-block; margin: 0 5px; padding: 12px 24px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
                 💻 GitHub
               </a>
-              <a href="https://linkedin.com/in/yourusername" style="display: inline-block; margin: 0 5px; padding: 12px 24px; background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
-                💼 LinkedIn
+              <a href="https://din.com/in/yourusername" style="display: inline-block; margin: 0 5px; padding: 12px 24px; background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
+                💼 dIn
               </a>
             </div>
           </div>

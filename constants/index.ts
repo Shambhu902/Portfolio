@@ -2,9 +2,7 @@ import { FaFacebook, FaYoutube } from "react-icons/fa";
 import {
   RxDiscordLogo,
   RxGithubLogo,
-  RxInstagramLogo,
-  RxLinkedinLogo,
-  RxTwitterLogo,
+  RxInstagramLogo
 } from "react-icons/rx";
 
 // export const SKILL_DATA = [
@@ -80,17 +78,17 @@ export const SOCIALS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/shambhu__x0001/",
   },
   {
     name: "Facebook",
     icon: FaFacebook,
-    link: "https://facebook.com",
+    link: "https://www.facebook.com/shambhudhan.pal.5",
   },
   {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://twitter.com",
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com/Shambhu902",
   },
 ] as const;
 
@@ -247,7 +245,7 @@ export const OTHER_SKILL = [
   },
   {
     skill_name: "Postman",
-    image: "postman.png", // Change from URL to local file
+    image: "postman-icon.svg", // Change from URL to local file
     width: 60,
     height: 60,
   },
@@ -295,14 +293,14 @@ export const FOOTER_DATA = [
         link: "https://instagram.com",
       },
       {
-        name: "Twitter",
-        icon: RxTwitterLogo,
-        link: "https://twitter.com",
+        name: "Discord",
+        icon: RxDiscordLogo,
+        link: "https://discord.com",
       },
       {
-        name: "Linkedin",
-        icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        name: "GitHub",
+        icon: RxGithubLogo,
+        link: "https://github.com/Shambhu902",
       },
     ],
   },
@@ -416,30 +414,30 @@ export const PROJECTS = [
     featured: false,
     date: "2023-10-05"
   },
-  {
-    title: "AI Content Generator",
-    description:
-      'An AI-powered content generation tool that helps creators write engaging copy, generate ideas, and optimize content for SEO using machine learning algorithms.',
-    image: "/projects/Portfolio.png", // Use existing image as placeholder
-    link: "https://example.com",
-    status: "delivered",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    categories: ["ai-ml", "fullstack"],
-    featured: true,
-    date: "2024-01-30"
-  },
-  {
-    title: "DevOps Automation Suite",
-    description:
-      'A comprehensive DevOps toolset for CI/CD pipeline automation, container orchestration, and infrastructure monitoring with real-time alerts.',
-    image: "/projects/Edvora.png", // Use existing image as placeholder
-    link: "https://example.com",
-    status: "delivered",
-    technologies: ["Docker", "Kubernetes", "AWS", "Terraform"],
-    categories: ["devops", "enterprise"],
-    featured: false,
-    date: "2023-09-15"
-  },
+  // {
+  //   title: "AI Content Generator",
+  //   description:
+  //     'An AI-powered content generation tool that helps creators write engaging copy, generate ideas, and optimize content for SEO using machine learning algorithms.',
+  //   image: "/projects/Portfolio.png", // Use existing image as placeholder
+  //   link: "https://example.com",
+  //   status: "delivered",
+  //   technologies: ["Python", "TensorFlow", "FastAPI", "React"],
+  //   categories: ["ai-ml", "fullstack"],
+  //   featured: true,
+  //   date: "2024-01-30"
+  // },
+  // {
+  //   title: "DevOps Automation Suite",
+  //   description:
+  //     'A comprehensive DevOps toolset for CI/CD pipeline automation, container orchestration, and infrastructure monitoring with real-time alerts.',
+  //   image: "/projects/Edvora.png", // Use existing image as placeholder
+  //   link: "https://example.com",
+  //   status: "delivered",
+  //   technologies: ["Docker", "Kubernetes", "AWS", "Terraform"],
+  //   categories: ["devops", "enterprise"],
+  //   featured: false,
+  //   date: "2023-09-15"
+  // },
   {
     title: "Social Media Dashboard",
     description:
@@ -464,18 +462,18 @@ export const PROJECTS = [
     featured: true,
     date: "2024-02-10"
   },
-  {
-    title: "Healthcare Management System",
-    description:
-      'An enterprise healthcare platform for patient records management, appointment scheduling, and telemedicine features with HIPAA compliance.',
-    image: "/projects/Edvora.png", // Use existing image as placeholder
-    link: "https://example.com",
-    status: "delivered",
-    technologies: ["Angular", "Java", "Spring Boot", "MySQL"],
-    categories: ["enterprise", "fullstack"],
-    featured: true,
-    date: "2023-11-30"
-  }
+  // {
+  //   title: "Healthcare Management System",
+  //   description:
+  //     'An enterprise healthcare platform for patient records management, appointment scheduling, and telemedicine features with HIPAA compliance.',
+  //   image: "/projects/Edvora.png", // Use existing image as placeholder
+  //   link: "https://example.com",
+  //   status: "delivered",
+  //   technologies: ["Angular", "Java", "Spring Boot", "MySQL"],
+  //   categories: ["enterprise", "fullstack"],
+  //   featured: true,
+  //   date: "2023-11-30"
+  // }
 ] as const;
 
 

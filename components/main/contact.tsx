@@ -91,19 +91,19 @@ export const Contact = () => {
   };
 
   const socialLinks = [
-    { name: "GitHub", icon: "💻", url: "https://github.com/ShambhudhanpalCodeWizard", color: "hover:text-gray-300" },
-    { name: "LinkedIn", icon: "💼", url: "https://linkedin.com", color: "hover:text-blue-400" },
-    { name: "Twitter", icon: "🐦", url: "https://twitter.com", color: "hover:text-sky-400" },
-    { name: "Email", icon: "📧", url: "mailto:contact.Shambhudhanpal0101@gmail.com", color: "hover:text-cyan-300" },
+    { name: "GitHub", icon: "💻", url: "https://github.com/Shambhu902", color: "hover:text-gray-300" },
+    { name: "dIn", icon: "💼", url: "https://www.din.com/in/shambhudhan/", color: "hover:text-blue-400" },
+    { name: "", icon: "🐦", url: "https://x.com/Shambhudhanpal", color: "hover:text-sky-400" },
+    { name: "Email", icon: "📧", url: "mailto:shambhudhanpal@gmail.com", color: "hover:text-cyan-300" },
   ];
 
   const contactItems = [
     {
       icon: EnvelopeIcon,
       title: "Email",
-      value: "contact.Shambhudhanpal0101@gmail.com",
+      value: "shambhudhanpal@gmail.com",
       subtitle: "Fastest response",
-      href: "mailto:contact.Shambhudhanpal0101@gmail.com",
+      href: "mailto:shambhudhanpal@gmail.com",
       hoverBg: "rgba(6, 182, 212, 0.08)",
       iconWrapClass: "bg-cyan-500/10",
       iconClass: "text-cyan-400",
@@ -111,9 +111,9 @@ export const Contact = () => {
     {
       icon: PhoneIcon,
       title: "Phone",
-      value: "+91 7667682319",
+      value: "+91 8294239455",
       subtitle: "Mon-Fri, 9AM-6PM",
-      href: "tel:+917667682319",
+      href: "tel:+918294239455",
       hoverBg: "rgba(147, 51, 234, 0.08)",
       iconWrapClass: "bg-purple-500/10",
       iconClass: "text-purple-400",
@@ -121,9 +121,9 @@ export const Contact = () => {
     {
       icon: MapPinIcon,
       title: "Location",
-      value: "Darbhanga, Bihar",
+      value: "Arrah, Bihar",
       subtitle: "Available worldwide",
-      href: "https://maps.google.com/?q=Darbhanga,Bihar",
+      href: "https://maps.google.com/?q=Arrah,Bihar",
       hoverBg: "rgba(6, 182, 212, 0.08)",
       iconWrapClass: "bg-cyan-500/10",
       iconClass: "text-cyan-400",
