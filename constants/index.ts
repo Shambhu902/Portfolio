@@ -395,7 +395,7 @@ export const PROJECTS = [
     description:
       'A full-featured e-commerce platform with real-time inventory management, payment processing, and customer analytics. Built with scalability and performance in mind.',
     image: "/projects/Edvora.png", // Use existing image as placeholder
-    link: "https://example.com",
+    link: "https://e-commerce-forever-3xf9.onrender.com",
     status: "delivered",
     technologies: ["Next.js", "Stripe", "MongoDB", "Node.js"],
     categories: ["fullstack", "enterprise"],
